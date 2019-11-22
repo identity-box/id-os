@@ -2,6 +2,10 @@ version: '2'
 services:
   wifi-connect:
     build: ./wifi-connect
+    privileged: true
+    network_mode: "host"
+    labels:
+      io.balena.features.dbus: '1'
   ssb-server:
     build: ./ssb-server
     network_mode: "host"
