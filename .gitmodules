@@ -1,0 +1,9 @@
+[submodule "wifi-connect"]
+	path = wifi-connect
+	url = https://github.com/balena-io/wifi-connect.git
+[submodule "ssb-server"]
+	path = ssb-server
+	url = https://github.com/markspanbroek/ssb-minimal-pub-server-balena.git
+[submodule "yggdrasil"]
+	path = yggdrasil
+	url = https://github.com/markspanbroek/yggdrasil-balena.git

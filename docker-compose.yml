@@ -1,0 +1,8 @@
+version: '2'
+services:
+  wifi-connect:
+    build: ./wifi-connect
+  ssb-server:
+    build: ./ssb-server
+  yggdrasil:
+    build: ./yggdrasil
