@@ -5,6 +5,11 @@ services:
   ssb-server:
     build: ./ssb-server
     network_mode: "host"
+    volumes:
+      - ssbhome:/root/.ssb
   yggdrasil:
     build: ./yggdrasil
     privileged: true
+
+volumes:
+  ssbhome:
