@@ -7,3 +7,4 @@ services:
     network_mode: "host"
   yggdrasil:
     build: ./yggdrasil
+    privileged: true
