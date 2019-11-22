@@ -4,5 +4,6 @@ services:
     build: ./wifi-connect
   ssb-server:
     build: ./ssb-server
+    network_mode: "host"
   yggdrasil:
     build: ./yggdrasil
