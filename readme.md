@@ -26,10 +26,10 @@ to install ID-OS:
 WiFi Setup
 ----------
 
-  ID-OS includes the [Wifi-Connect][5] software from Balena. This means that the
-  Pi exposes an access point called 'Wifi Connect'. You can connect to this
-  access point using a mobile device, which will pop-up a dialog for configuring
-  the WiFi connection of ID-OS.
+ID-OS includes the [Wifi-Connect][5] software from Balena. This means that the
+Pi exposes an access point called 'Wifi Connect'. You can connect to this access
+point using a mobile device, which will pop-up a dialog for configuring the WiFi
+connection of ID-OS.
 
 
 [1]: https://balena.io
