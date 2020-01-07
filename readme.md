@@ -31,9 +31,17 @@ Pi exposes an access point called 'Wifi Connect'. You can connect to this access
 point using a mobile device, which will pop-up a dialog for configuring the WiFi
 connection of ID-OS.
 
+Troubleshooting
+---------------
+
+Should you experience interrupted ssb-server builds, then using a faster sd card
+may solve the issue.
+
+If this does not solve your issue, please [let us know][6].
 
 [1]: https://balena.io
 [2]: https://www.balena.io/os/#download
 [3]: https://www.balena.io/etcher/
 [4]: https://github.com/balena-io/balena-cli/blob/master/INSTALL.md
 [5]: https://github.com/balena-io/wifi-connect
+[6]: https://github.com/markspanbroek/id-os/issues
