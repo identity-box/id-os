@@ -4,6 +4,13 @@ ID-OS
 An *experimental* operating system for decentralized apps.
 Based on [Balena OS][1].
 
+Checkout
+--------
+
+This repository contains git submodules. Make sure that you clone this repo with
+the `--recursive` flag, or invoke `git submodule update --init --recursive`
+after cloning.
+
 Installation
 ------------
 
