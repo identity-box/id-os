@@ -1,0 +1,11 @@
+{
+  "name": "ssb-minimal-pub-server-balena",
+  "version": "0.1.0",
+  "dependencies": {
+    "ssb-minimal-pub-server": "^15.1.0",
+    "sodium-native": "^2.4.6"
+  },
+  "scripts": {
+    "start": "ssb-server start"
+  }
+}
