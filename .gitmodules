@@ -1,6 +1,3 @@
 [submodule "wifi-connect"]
 	path = wifi-connect
 	url = https://github.com/balena-io/wifi-connect.git
-[submodule "yggdrasil"]
-	path = yggdrasil
-	url = https://github.com/markspanbroek/yggdrasil-balena.git
