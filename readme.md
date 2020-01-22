@@ -2,7 +2,7 @@ ID-OS
 =====
 
 An *experimental* operating system for decentralized apps.
-Based on [Balena OS][1].
+Based on [balenaOS][1].
 
 Checkout
 --------
@@ -17,10 +17,10 @@ Installation
 ID-OS is currently only tested on a Raspberry Pi 4 with 4Gb. Follow these steps
 to install ID-OS:
 
-  1. Download the [Balena OS development image][2] for Raspberry Pi 4.
-  2. Flash the image to an SD card for your Pi. You can use [Balena Etcher][3]
+  1. Download the [balenaOS development image][2] for Raspberry Pi 4.
+  2. Flash the image to an SD card for your Pi. You can use [balenaEtcher][3]
       for this.
-  3. Install the [Balena CLI][4] on the development machine where you checked
+  3. Install the [balena CLI][4] on the development machine where you checked
       out this repository.
   4. Connect the Pi to the same network as your development machine using an
       ethernet cable. A WiFi connection can be configured later, but for now
@@ -33,8 +33,8 @@ to install ID-OS:
 WiFi Setup
 ----------
 
-ID-OS includes the [Wifi-Connect][5] software from Balena. This means that the
-Pi exposes an access point called 'Wifi Connect'. You can connect to this access
+ID-OS includes the [WiFi Connect][5] software from balena. This means that the
+Pi exposes an access point called 'WiFi Connect'. You can connect to this access
 point using a mobile device, which will pop-up a dialog for configuring the WiFi
 connection of ID-OS.
 
