@@ -3,4 +3,5 @@ RUN install_packages build-essential libtool autoconf automake python3 tor
 COPY package.json /package.json
 RUN npm install
 COPY torrc /etc/tor/torrc
-CMD tor & npm start
+COPY ssb-server-on-tor /ssb-server-on-tor
+CMD /ssb-server-on-tor
