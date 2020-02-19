@@ -1,0 +1,2 @@
+HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServicePort 8008 127.0.0.1:8008
