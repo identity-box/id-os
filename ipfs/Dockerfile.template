@@ -1,0 +1,12 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%
+
+RUN \
+  curl https://dist.ipfs.io/go-ipfs/v0.4.23/go-ipfs_v0.4.23_linux-arm64.tar.gz \
+  | tar xvz \
+  && mv go-ipfs/ipfs /usr/bin/ipfs \
+  && rm -rf go-ipfs
+
+COPY init-ipfs /usr/bin/init-ipfs
+COPY start-ipfs /usr/bin/start-ipfs
+
+CMD init-ipfs && start-ipfs

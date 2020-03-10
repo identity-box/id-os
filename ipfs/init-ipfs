@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm -f /root/.ipfs/api
+
+if [ ! -f /root/.ipfs/config ]; then
+  ipfs init --profile server
+fi
+
+ipfs config Addresses.Gateway "" &&
+ipfs config DataStore.StorageMax 10MB &&
+ipfs config Swarm.AddrFilters --json 'null' &&
+ipfs config Swarm.DisableBandwidthMetrics --json 'true' &&
+ipfs config Swarm.ConnMgr.LowWater --json '100' &&
+ipfs config Swarm.ConnMgr.HighWater --json '300'

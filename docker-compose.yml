@@ -9,6 +9,12 @@ services:
       - NET_ADMIN
     environment:
       DBUS_SYSTEM_BUS_ADDRESS: "unix:path=/host/run/dbus/system_bus_socket"
+  ipfs:
+    build: ./ipfs
+    expose:
+      - "5001"
+    volumes:
+      - ipfs:/root/.ipfs
   ssb-server:
     build: ./ssb-server
     network_mode: "bridge"
@@ -19,3 +25,4 @@ services:
 volumes:
   ssbhome:
   ssbtor:
+  ipfs:

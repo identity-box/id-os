@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ipfs daemon \
+  --enable-namesys-pubsub \
+  --enable-pubsub-experiment \
+  --enable-gc \
+  --migrate
