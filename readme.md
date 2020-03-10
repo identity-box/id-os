@@ -45,25 +45,63 @@ ID-OS includes software for the [Scuttlebutt][7] social network. This software
 is called a [Scuttlebutt pub][8], and it can keep a copy of all your posts, so
 that others can see your posts when you're offline.
 
-In order to connect a Scuttlebutt client such as [Patchwork][9] to the pub
-that's running on ID-OS, you need an invite code. Currently, you need to use a
-command line to obtain the invite code:
+To take part in the Scuttlebutt social network, you need to install a
+Scuttlebutt client, such as [Patchwork][9]. Once you've installed it, you can
+connect it to the pub that's running on ID-OS. In order to do this you need an
+invite code from this pub. Currently, you need to use a command line to obtain
+the invite code:
 
 ```bash
 # login to the pub's container:
 balena ssh balena.local ssb-server
 
-# print a new invite code:
+# create an invite code for your pub:
 node_modules/.bin/ssb-server invite.create 1
 ```
 
-ID-OS uses the [Tor][10] router for all messages to and from the pub. That's why
-the invite code contains a .onion address. Only Scuttlebutt clients that support
-Tor can use these invite codes. Patchwork supports Tor; it's usually
-[enough][12] to have [Tor Browser][11] open at the same time as Patchwork.
+You can now use this invite code in Patchwork. Click 'Join Server' and paste the
+invite code when requested. ID-OS uses the [Tor][10] router for all messages to
+and from the pub. That's why the invite code contains a .onion address. Only
+Scuttlebutt clients that support Tor can use these invite codes. Patchwork
+supports Tor; it's usually [enough][12] to have [Tor Browser][11] open at the
+same time as Patchwork. Please note that this does not make you anonymous,
+anonymity requires [more][13] than just the use of Tor.
 
-Please note that this does not make you anonymous. Anonymity requires [more][13]
-than just the use of Tor.
+In order to connect to the greater Scuttlebutt community, you may want to
+connect your pub to a public pub. Please go the list of [public pubs][16],
+choose one, and obtain an invite code for it. Once you have the invite code, add
+it to your pub:
+
+```bash
+# login to the pub's container:
+balena ssh balena.local ssb-server
+
+# accept the invite code from the public pub:
+node_modules/.bin/ssb-server invite.accept "<paste invite code here>"
+```
+
+Decentralized Git
+-----------------
+
+Even though the Git version control system is decentralized, it is mostly used
+in a centralized manner. GitHub and GitLab are centralized services where most
+projects store their main repository, issues, and pull requests. ID-OS supports
+a truly decentralized alternative called [git-ssb][14], which stores Git
+repositories on Scuttlebutt. We also use it for the [ID-OS repository][15].
+
+In order to install git-ssb you first need to have a running Scuttlebutt client
+connected to the network, by following the instructions above. Also connect to
+the greater Scuttlebutt community, otherwise you won't be able to download the
+git-ssb software. Make sure that Patchwork is running and then run the
+[installation script][17]:
+
+```bash
+curl -s 'http://localhost:8989/blobs/get/&ErUlQYegJprhEZUNO/HwHQ2UES+XUpT1XIb27GTGjT0=.sha256' | sh
+```
+
+Now that you've installed git-ssb, you can create, clone, and push to `ssb://`
+remotes. For more information including examples, please read the [git-ssb
+readme][18].
 
 Troubleshooting
 ---------------
@@ -86,3 +124,8 @@ If this does not solve your issue, please [let us know][6].
 [11]: https://www.torproject.org/download/
 [12]: https://handbook.scuttlebutt.nz/faq/misc/tor
 [13]: https://www.whonix.org/wiki/DoNot
+[14]: https://git.scuttlebot.io/%25n92DiQh7ietE%2BR%2BX%2FI403LQoyf2DtR3WQfCkDKlheQU%3D.sha256
+[15]: https://git.scuttlebot.io/%252BPN%2B%2F97k9XBiE8yYRFqL0Wp6y0kMeplY6XMKSpUhmU%3D.sha256
+[16]: https://github.com/ssbc/ssb-server/wiki/Pub-Servers
+[17]: https://viewer.scuttlebot.io/%259%2F2M5lUETpt7uVbbf%2BPocNHqtwWpPyIkQP3TPoELPBc%3D.sha256
+[18]: https://git.scuttlebot.io/%25n92DiQh7ietE%2BR%2BX%2FI403LQoyf2DtR3WQfCkDKlheQU%3D.sha256
